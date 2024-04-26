@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Navbar = ({ handleDownload }) => {
   const [navIsOpened, setNavIsOpened] = useState(false);
@@ -8,7 +8,7 @@ const Navbar = ({ handleDownload }) => {
   };
 
   const toggleNavbar = () => {
-    setNavIsOpened(navIsOpened => !navIsOpened);
+    setNavIsOpened((navIsOpened) => !navIsOpened);
   };
 
   return (
@@ -17,7 +17,7 @@ const Navbar = ({ handleDownload }) => {
         aria-hidden={true}
         onClick={closeNavbar}
         className={`fixed bg-gray-800/40 inset-0 z-30 ${
-          navIsOpened ? 'lg:hidden' : 'hidden lg:hidden'
+          navIsOpened ? "lg:hidden" : "hidden lg:hidden"
         }`}
       />
       <header className="sticky top-0 w-full flex items-center h-20 border-b border-b-gray-200 z-40 bg-white/80 backdrop-filter backdrop-blur-xl courier-prime-regular">
@@ -29,41 +29,43 @@ const Navbar = ({ handleDownload }) => {
                 <span className="w-3 h-6 rounded-r-full flex bg-rose-500 mt-2" />
               </span>
               <span className="inline-flex text-lg font-bold text-indigo-950 ">
-                Make My Resume{' '}
+                Make My Resume{" "}
                 <span className="bg-indigo-50 inline-block border border-dashed border-indigo-600 h-4 ml-3 text-xs">
                   Beta
                 </span>
               </span>
             </a>
           </div>
+          <p className='border rounded p-1 text-sm flex h-12 border-blue-500 bg-blue-200/50 text-center '> Auto-saving is currently off</p>
           <button
             onClick={handleDownload}
             className="relative flex justify-center px-6  py-3 before:absolute before:inset-0 before:rounded-lg before:transition before:bg-blue-600  text-indigo-600 dark:text-white hover:before:scale-105"
           >
             <span class="relative flex">
-  <span class="hidden md:inline-block">Download </span>
-  <span class="inline-block ">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="ml-3 lucide lucide-download"
-    >
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <polyline points="7 10 12 15 17 10" />
-      <line x1="12" x2="12" y1="15" y2="3" />
-    </svg>
-  </span>
-</span>
+              <span class="hidden md:inline-block">Download </span>
+              <span class="inline-block ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="ml-3 lucide lucide-download"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" x2="12" y1="15" y2="3" />
+                </svg>
+              </span>
+            </span>
           </button>
         </nav>
       </header>
+      
     </>
   );
 };
@@ -86,7 +88,7 @@ export default function Header() {
 
   return (
     <div>
-      <div className={`flex headerlogo mb-10 ${headerVisible ? '' : 'hidden'}`}>
+      <div className={`flex headerlogo mb-10 ${headerVisible ? "" : "hidden"}`}>
         {buttonVisible && <Navbar handleDownload={handleDownload} />}
       </div>
       <div className={`text-center $`}>
@@ -94,7 +96,8 @@ export default function Header() {
           Your Name
         </div>
         <div contentEditable={true} className="f12">
-          Pune, Maharashtra 411041 | +91 7077X XXXXX | username@gmail.com | linkedin/yourid
+          Pune, Maharashtra 411041 | +91 7077X XXXXX | username@gmail.com |
+          linkedin/yourid
         </div>
       </div>
     </div>

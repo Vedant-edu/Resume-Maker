@@ -16,7 +16,7 @@ return (
           <p className="mt-2 text-gray-900 ">ATS Compitable </p>
           <p className="mt-2 text-gray-900 ">Just Edit, Easily Customizable</p>
           <p className="mt-2 text-gray-900 ">Made with 💖 by <a href="vedantmute.netlify.app" className='underline'>Vedant Mute</a>
-</p>
+</p> 
           
         </div>
         <div className="flex flex-1 lg:w-1/2 relative max-w-3xl mx-auto lg:max-w-none">
